@@ -8,6 +8,9 @@ dependencies:
   next:
     specifier: canary
     version: 13.4.8-canary.8(react-dom@18.2.0)(react@18.2.0)
+  randomcolor:
+    specifier: ^0.6.2
+    version: 0.6.2
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -19,6 +22,9 @@ devDependencies:
   '@types/node':
     specifier: ^18.11.13
     version: 18.11.13
+  '@types/randomcolor':
+    specifier: ^0.5.7
+    version: 0.5.7
   '@types/react':
     specifier: ^18.0.26
     version: 18.0.26
@@ -125,6 +131,10 @@ packages:
 
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: true
+
+  /@types/randomcolor@0.5.7:
+    resolution: {integrity: sha512-LPcG96dGYRCsXlk1fslUNIg6ebEi+bKNyn84uBL/pu2cRSf5i/djD3ArJZOyzszVMVV/DB87va6pMZP+tRSl/w==}
     dev: true
 
   /@types/react@18.0.26:
@@ -237,6 +247,10 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: false
+
+  /randomcolor@0.6.2:
+    resolution: {integrity: sha512-Mn6TbyYpFgwFuQ8KJKqf3bqqY9O1y37/0jgSK/61PUxV4QfIMv0+K2ioq8DfOjkBslcjwSzRfIDEXfzA9aCx7A==}
     dev: false
 
   /react-dom@18.2.0(react@18.2.0):
