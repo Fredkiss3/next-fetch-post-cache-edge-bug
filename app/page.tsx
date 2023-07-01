@@ -14,7 +14,7 @@ export default function Page() {
       </form>
 
       <br />
-      <Link href={"/redirect"}>Go to `/redirect`</Link>
+      <Link href={"/target"}>Go to `/target`</Link>
     </main>
   );
 }
