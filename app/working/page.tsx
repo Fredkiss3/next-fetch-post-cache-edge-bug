@@ -4,20 +4,19 @@ import {
   getFileCounter,
   incrementCookieCounter,
   incrementFileCounter,
-} from "./_action";
+} from "../_action";
 
 export default async function Page() {
   const cookieCounter = await getCookieCounter();
   const fileCounter = await getFileCounter();
   return (
     <main>
-      <h1>Path: / (home) </h1>
+      <h1>Path: /working </h1>
       <h1>
         File Counter = {fileCounter} | cookie Counter = {cookieCounter}
       </h1>
 
       <form>
-        <input type="hidden" name="_redirect" value={"something"} />
         <button formAction={incrementCookieCounter}>
           Increment cookie counter
         </button>
@@ -30,8 +29,6 @@ export default async function Page() {
 
       <br />
       <Link href={"/target"}>Go to `/target`</Link>
-      <br />
-      <Link href={"/working"}>Go to `/working`</Link>
     </main>
   );
 }

@@ -13,7 +13,9 @@ export async function incrementCookieCounter(fd: FormData) {
   const counter = await getCookieCounter();
 
   cookies().set("_counter", (counter + 1).toString());
-  redirect("/target");
+  if (fd.get("_redirect")) {
+    redirect("/target");
+  }
 }
 
 export async function getFileCounter(): Promise<number> {
@@ -28,7 +30,7 @@ export async function getFileCounter(): Promise<number> {
   }
 }
 
-export async function incrementFileCounter() {
+export async function incrementFileCounter(fd: FormData) {
   const dbPath = path.resolve(__dirname, "./db.json");
 
   const currentCounter = await getFileCounter();
@@ -39,6 +41,9 @@ export async function incrementFileCounter() {
   };
 
   await fs.writeFile(dbPath, JSON.stringify(newData, null, 2), "utf8");
+
   revalidatePath("/");
-  redirect("/target");
+  if (fd.get("_redirect")) {
+    redirect("/target");
+  }
 }
