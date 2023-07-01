@@ -1,16 +1,30 @@
 import Link from "next/link";
-import { increment } from "./_action";
-import { getCounter } from "./utils";
+import {
+  getCookieCounter,
+  getFileCounter,
+  incrementCookieCounter,
+  incrementFileCounter,
+} from "./_action";
 
-export default function Page() {
-  const counter = getCounter();
+export default async function Page() {
+  const cookieCounter = await getCookieCounter();
+  const fileCounter = await getFileCounter();
   return (
     <main>
       <h1>Path: / (home) </h1>
-      <h1>Counter: {counter}</h1>
+      <h1>
+        File Counter = {fileCounter} | cookie Counter = {cookieCounter}
+      </h1>
 
-      <form action={increment}>
-        <button>Increment counter</button>
+      <form>
+        <button formAction={incrementCookieCounter}>
+          Increment cookie counter
+        </button>
+        <br />
+        <br />
+        <button formAction={incrementFileCounter}>
+          Increment file counter (uses revalidatePath)
+        </button>
       </form>
 
       <br />
