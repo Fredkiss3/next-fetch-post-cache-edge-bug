@@ -6,15 +6,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "canary",
-    "randomcolor": "^0.6.2",
+    "next": "13.4.8-canary.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.13",
-    "@types/randomcolor": "^0.5.7",
-    "@types/react": "^18.0.26",
-    "typescript": "^4.9.4"
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "typescript": "^5.1.6"
   }
 }
