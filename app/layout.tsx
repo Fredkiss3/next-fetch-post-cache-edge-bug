@@ -4,7 +4,7 @@ export const metadata = {
   title: "Fetch CACHE - edge runtime - BUG - Next.js",
 };
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export default async function RootLayout({
   children,
