@@ -1,6 +1,9 @@
 export default async function Page() {
   const cache = await fetch("http://127.0.0.1:3000/api/cache", {
     method: "POST",
+    headers: {
+      Authorization: "Bearer token",
+    },
     body: JSON.stringify({ path: "/" }),
   }).then((r) => r.json());
   const noCache = await fetch("http://127.0.0.1:3000/api/no-cache", {
