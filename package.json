@@ -6,7 +6,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "13.4.8-canary.14",
+    "@libsql/client": "^0.2.2",
+    "drizzle-orm": "^0.27.0",
+    "next": "13.4.10-canary.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -14,6 +16,7 @@
     "@types/node": "^18.11.13",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "drizzle-kit": "^0.19.3",
     "typescript": "^5.1.6"
   }
 }
